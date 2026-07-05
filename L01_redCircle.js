@@ -7,4 +7,5 @@ function draw(){
     fill(255, 0, 0);
     ellipse(300,200,400,400);
     fill(0,0,0)
+    rect
 }
