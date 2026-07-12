@@ -15,5 +15,5 @@ function setup() {
 
 function draw() {
     circle(30,30,50)
-    rect(50,50,)
+    rect(50,50,100,200)
 }
