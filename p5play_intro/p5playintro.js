@@ -14,5 +14,5 @@ function setup() {
 }
 
 function draw() {
-    CSSNumericValue()
+    circle(50,50)
 }
