@@ -1,4 +1,5 @@
-
+let ball;
+let box;
 
 function setup() {
   // Set up the canvas
