@@ -10,8 +10,8 @@ function setup() {
   // --- Exercise: Age category classification ---
   // write your codes here
 let sum=0
-
-  // --- Exercise: Display odd numbers backward using while loop ---
+for(let i=2;i<=20;i+=2)
+{}  // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
   // --- Exercise: Array operations (groceries) ---
