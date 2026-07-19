@@ -39,7 +39,8 @@ groceries.push("butter")
 console.log(groceries)
 groceries.push("orange")
 console.log(groceries)
-groceries.shift
+groceries.shift();
+console.log()
 }
 
 function draw(){}
