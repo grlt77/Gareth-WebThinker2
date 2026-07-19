@@ -42,7 +42,8 @@ console.log(groceries);
 groceries.shift();
 console.log(groceries);
 groceries.splice(1,1,kaya);
-con
+console.log(groceries)
+
 }
 
 function draw(){}
