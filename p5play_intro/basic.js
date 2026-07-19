@@ -41,7 +41,7 @@ groceries.push("orange");
 console.log(groceries);
 groceries.shift();
 console.log(groceries);
-groceries.splice
+groceries.splice(1,1)
 }
 
 function draw(){}
