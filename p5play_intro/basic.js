@@ -14,20 +14,24 @@ function setup() {
 
   // --- Exercise: Age category classification ---
   // write your codes here
-  let age = 21
-  if (age < 9){
-    console.log("lower primary")
-  }else if(age <= 12){
-    console.log("upper primary")
-  }else {
-    
-  }
+  //let age = 21
+  //if (age < 9){
+    //console.log("lower primary")
+  //}else if(age <= 12){
+    //console.log("upper primary")
+  //}else {
+
+//  }
 
 
 
 // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
-
+let num = 19
+while (num != 1){
+  console.log (num)
+  num = num - 2
+}
   // --- Exercise: Array operations (groceries) ---
   // write your codes here
 }
