@@ -35,12 +35,13 @@ function setup() {
   // --- Exercise: Array operations (groceries) ---
   // write your codes here
 let groceries = ["apple","bread","milk"]
-groceries.push("butter")
-console.log(groceries)
-groceries.push("orange")
-console.log(groceries)
+groceries.push("butter");
+console.log(groceries);
+groceries.push("orange");
+console.log(groceries);
 groceries.shift();
 console.log(groceries);
+
 }
 
 function draw(){}
