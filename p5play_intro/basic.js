@@ -36,7 +36,7 @@ function setup() {
   // write your codes here
 let groceries = ["apple","bread","milk"]
 groceries.push("butter")
-con
+console.log(groceries)
 }
 
 function draw(){}
