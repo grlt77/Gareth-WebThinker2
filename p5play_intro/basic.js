@@ -11,7 +11,8 @@ function setup() {
   // write your codes here
 let sum=0
 for(let i=2;i<=20;i+=2){
-  text(i+",",200+i*20,120)
+  text(i+",",200+i*20,120);
+  sum=
 }  // --- Exercise: Display odd numbers backward using while loop ---
   // write your codes here
 
