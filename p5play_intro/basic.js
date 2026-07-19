@@ -1,6 +1,6 @@
 function setup() {
   // write your codes here
-  console.log("titus is GAY")
+  console.log("titus is GAY");
   // --- Exercise: Area of Triangle ---
   // write your codes here
 
