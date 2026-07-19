@@ -17,3 +17,4 @@ function setup() {
   // write your codes here
 }
 
+function draw(){}
