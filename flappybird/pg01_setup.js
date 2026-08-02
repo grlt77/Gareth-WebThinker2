@@ -20,14 +20,14 @@ function setup(){
     bird.collider = "dynamic";
     bird.mass = 2;
     bird.drag = 0.02;
-    bird.bounciness = 5;
+    bird.bounciness = ;
     world.gravity.y = 10;
 
     floor = new Sprite();
     floor.x = 200;
     floor.y = height - 20;
     floor.width = 400;
-    floor.height = 1100;
+    floor.height = 125;
     floor.collider = "static";
     floor.img = base;
 }
