@@ -20,7 +20,7 @@ function setup(){
     bird.collider = "dynamic";
     bird.mass = 2;
     bird.drag = 0.02;
-    bird.bounciness = 24;
+    bird.bounciness = 0.5;
     world.gravity.y = 10;
 
     floor = new Sprite();
@@ -34,4 +34,8 @@ function setup(){
 
 function draw(){
     image(bg,0,0,width,height);
+
+    if (kb.presses('space')){
+        
+    }
 }
