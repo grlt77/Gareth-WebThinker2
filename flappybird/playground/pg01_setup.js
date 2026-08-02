@@ -19,5 +19,5 @@ function setup(){
 }
 
 function draw(){
-    
+    Image()
 }
