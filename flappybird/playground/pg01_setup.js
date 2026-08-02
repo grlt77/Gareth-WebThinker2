@@ -18,3 +18,6 @@ function setup(){
     bird.img = flapMidImg;
 }
 
+function draw(){
+    
+}
