@@ -42,6 +42,6 @@ function draw(){
 
     fill("blue");
     textSize(14);
-    
+    Text()
 
 }
