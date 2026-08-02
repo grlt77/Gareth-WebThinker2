@@ -36,7 +36,7 @@ function draw(){
     image(bg,0,0,width,height);
 
     if (kb.presses('space')){
-        bird.vel.y = -15;
+        bird.vel.y = -1;
         bird.sleeping = false;
     }
 }
