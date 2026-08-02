@@ -8,6 +8,6 @@ function preload() {
 }
 
 function setup(){
-    new canvas
+    new Canvas()
 }
 
