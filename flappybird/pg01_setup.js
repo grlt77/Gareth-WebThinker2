@@ -11,12 +11,12 @@ function setup(){
     new Canvas(400,600);
     background('white')
 
-    // bird = new Sprite();
-    // bird.x = width / 2;
-    // bird.y = 200;
-    // bird.width = 30;
-    // bird.height = 30;
-    // bird.img = flapMidImg;
+    bird = new Sprite();
+    bird.x = width / 2;
+    bird.y = 200;
+    bird.width = 30;
+    bird.height = 30;
+    bird.img = flapMidImg;
 }
 
 function draw(){
