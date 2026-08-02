@@ -39,4 +39,6 @@ function draw(){
         bird.vel.y = -20;
         bird.sleeping = false;
     }
+
+    fill
 }
