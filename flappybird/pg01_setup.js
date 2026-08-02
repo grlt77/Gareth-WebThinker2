@@ -40,7 +40,8 @@ function draw(){
         bird.sleeping = false;
     }
 
-    fill("blue")
-    textSize(14)
+    fill("blue");
+    textSize(14);
+    
 
 }
