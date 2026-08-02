@@ -9,6 +9,7 @@ function preload() {
 
 function setup(){
     new Canvas(400,600);
+    background
 
     // bird = new Sprite();
     // bird.x = width / 2;
