@@ -34,16 +34,16 @@ function setup() {
 //}
   // --- Exercise: Array operations (groceries) ---
   // write your codes here
-let groceries = ["apple","bread","milk"]
-groceries.push("butter");
-console.log(groceries);
-groceries.push("orange");
-console.log(groceries);
-groceries.shift();
-console.log(groceries);
-groceries.splice(1,1,kaya);
-console.log(groceries)
-console.log(groceries)
+// let groceries = ["apple","bread","milk"]
+// groceries.push("butter");
+// console.log(groceries);
+// groceries.push("orange");
+// console.log(groceries);
+// groceries.shift();
+// console.log(groceries);
+// groceries.splice(1,1,kaya);
+// console.log(groceries)
+// console.log(groceries)
 }
 
 function draw(){}
