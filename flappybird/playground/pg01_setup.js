@@ -7,5 +7,7 @@ function preload() {
     base = loadImage('assets/base.png');
 }
 
-function setup()
+function setup(){
+    new canvas
+}
 
