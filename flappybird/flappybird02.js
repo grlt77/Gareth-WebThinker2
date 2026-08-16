@@ -3,6 +3,8 @@ let flapMidImg, bg, base;
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
+    flapUpImg = loadImage('assets/yellowbird-upflap.png');
+    flapDownImg = loadImage('assets/yellowbird-downflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
 }
@@ -36,7 +38,7 @@ function draw(){
     image(bg,0,0,width,height);
 
     if (kb.presses('space')){
-        bird.vel.y = -15;
+        bird.vel.y = -3;
         bird.sleeping = false;
     }
 
@@ -46,4 +48,16 @@ function draw(){
     text('isMoving: ' + bird.isMoving,10,40);
     text('sleeping: ' + bird.sleeping,10,60);
 
+    if (bird.vel.y < -1){
+        bird.img = flapUpImg;
+        bird.rotation = -30;
+    }
+    else if (bird.vel.y > 1){
+        bird.img = flapDownImg;
+        bird.rotation = 30; 
+    }
+    else {
+        bird.img = flapMidImg;
+        bird.rotation = 0;
+    }
 }
