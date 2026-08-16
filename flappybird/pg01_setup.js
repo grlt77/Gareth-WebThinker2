@@ -1,6 +1,6 @@
 let bird, floor; 
 let flapMidImg, bg, base;
-let pipeGroup
+let pipeGroup,
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
@@ -71,5 +71,5 @@ function draw(){
 }
 
 function spawnPipePair(){
-    
+
 }
