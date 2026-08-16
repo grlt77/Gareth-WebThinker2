@@ -3,6 +3,7 @@ let flapMidImg, bg, base;
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
+    
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
 }
@@ -46,7 +47,7 @@ function draw(){
     text('isMoving: ' + bird.isMoving,10,40);
     text('sleeping: ' + bird.sleeping,10,60);
 
-        if (bird.vel.y < -1){
+    if (bird.vel.y < -1){
         bird.img = flapUpImg;
         bird.rotation = -30;
     }
