@@ -8,7 +8,7 @@ function preload() {
     flapDownImg = loadImage('assets/yellowbird-downflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
-    
+
 }
 
 function setup(){
@@ -34,6 +34,8 @@ function setup(){
     floor.height = 125;
     floor.collider = "static";
     floor.img = base;
+
+    pipe
 }
 
 function draw(){
