@@ -71,7 +71,8 @@ function draw(){
     }
 
     bird.x += 3;
-    camera.x
+    camera.x = bird.x;
+    
 }
 
 function spawnPipePair(){
