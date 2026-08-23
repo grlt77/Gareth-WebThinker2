@@ -80,7 +80,7 @@ function draw(){
 
     for (let pipe of pipeGroup){
         if(pipe.x < -50){
-            pipe.remove
+            pipe.remove()
         }
     }
 }
