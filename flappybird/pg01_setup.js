@@ -74,7 +74,7 @@ function draw(){
     camera.x = bird.x;
     floor.x = bird.x;
 
-    if (frameCount % 90 === 0 ){
+    if (frameCount % 60 === 0 ){
         spawnPipePair();
     }
 
@@ -87,7 +87,7 @@ function draw(){
 
 function spawnPipePair(){
     let gap = 50;
-    let midY = random(250, height - 50)
+    let midY = random(250, height - 400)
 
     bottomPipe = new Sprite(bird.x + 400, midY + gap / 2 + 200, 52, 320, 'static');
     bottomPipe.img = pipe;
