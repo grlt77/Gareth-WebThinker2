@@ -72,31 +72,31 @@ function draw(){
         }
         else if (bird.vel.y > 1){
             bird.img = flapDownImg;
-        bird.rotation = 30; 
-    }
-    else {
-        bird.img = flapMidImg;
-        bird.rotation = 0;
-    }
-    
-    if (frameCount === 1){
-        spawnPipePair();
-    }
-
-    bird.x += 3;
-    camera.x = bird.x;
-    floor.x = bird.x;
-
-    if (frameCount % 60 === 0 ){
-        spawnPipePair();
-    }
-
-    for (let pipe of pipeGroup){
-        if(pipe.x < -50){
-            pipe.remove()
+            bird.rotation = 30; 
         }
-    }
+        else {
+            bird.img = flapMidImg;
+            bird.rotation = 0;
+        }
+        
+        if (frameCount === 1){
+            spawnPipePair();
+            }
 
+        bird.x += 3;
+        camera.x = bird.x;
+        floor.x = bird.x;
+
+        if (frameCount % 60 === 0 ){
+            spawnPipePair();
+        }
+
+        for (let pipe of pipeGroup){
+            if(pipe.x < -50){
+                pipe.remove()
+                }
+        }
+        
     if (bird.collides(pipeGroup) || bird.collides(floor)){
         gameoverLabel = new Sprite(width/2, height/2, 192, 42);
         gameoverLabel.img = gameoverImg;
