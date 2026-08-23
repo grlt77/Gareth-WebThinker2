@@ -100,11 +100,7 @@ function draw(){
         noLoop();
     }
 
-    if (kb.presses('space') || MouseEvent.presses()){
-        startGame = true
-        startScreenLabel.visible = false
-    }
-    if (startGame){}
+
 }
 
 function spawnPipePair(){
