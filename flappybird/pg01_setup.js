@@ -47,6 +47,12 @@ function setup(){
 }
 
 function draw(){
+
+    if (kb.presses('space') || MouseEvent.presses()){
+        startGame = true
+        startScreenLabel.visible = false
+    }
+    if (startGame){}
     image(bg,0,0,width,height);
 
     if (kb.presses('space')){
