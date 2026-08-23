@@ -40,6 +40,8 @@ function setup(){
     floor.img = base;
 
     pipeGroup = new Group();
+
+    startScreenLabel
 }
 
 function draw(){
