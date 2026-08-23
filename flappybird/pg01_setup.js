@@ -41,7 +41,7 @@ function setup(){
 
     pipeGroup = new Group();
 
-    startScreenLabel
+    startScreenLabel = new Sp
 }
 
 function draw(){
