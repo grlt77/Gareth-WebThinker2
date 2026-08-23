@@ -102,7 +102,7 @@ function draw(){
 
     if (kb.presses('space') || MouseEvent.presses()){
         startGame = true
-        sta
+        startScreenLabel.visible
     }
 }
 
