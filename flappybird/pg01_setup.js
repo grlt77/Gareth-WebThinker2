@@ -75,8 +75,10 @@ function draw(){
     floor.x = bird.x;
 
     if (frameCount % 90 == 0 ){
-        spawnPipePair
+        spawnPipePair();
     }
+
+    
 }
 
 function spawnPipePair(){
