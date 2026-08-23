@@ -8,7 +8,7 @@ function preload() {
     flapDownImg = loadImage('assets/yellowbird-downflap.png');
     bg = loadImage('assets/background-night.png');
     base = loadImage('assets/base.png');
-    pipe = loadImage('assets/pipe-green.png');
+    pipe = loadImage('assets/pipe-green.png');                              
 
 }
 
