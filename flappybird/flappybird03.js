@@ -70,7 +70,7 @@ function draw(){
         spawnPipePair();
     }
 
-    
+    bird.x 
 }
 
 function spawnPipePair(){
