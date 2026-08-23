@@ -91,7 +91,7 @@ function draw(){
     }
 
     if (bird.collides(pipeGroup) || bird.collides(floor)){
-        gameoverLabel = new S
+        gameoverLabel = new Sprite(wid)
     }
 }
 
