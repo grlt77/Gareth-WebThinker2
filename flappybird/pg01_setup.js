@@ -100,7 +100,10 @@ function draw(){
         noLoop();
     }
 
-    if (kb.presses('space') || MouseEvent.presses())
+    if (kb.presses('space') || MouseEvent.presses()){
+        startGame = true
+        sta
+    }
 }
 
 function spawnPipePair(){
