@@ -53,9 +53,7 @@ function draw(){
         startScreenLabel.visible = false
     }
     if (startGame){
-        
-    }
-    image(bg,0,0,width,height);
+        image(bg,0,0,width,height);
 
     if (kb.presses('space')){
         bird.vel.y = -3;
@@ -108,6 +106,8 @@ function draw(){
         noLoop();
     }
 
+    }
+    
 
 }
 
