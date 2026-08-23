@@ -2,7 +2,7 @@ let bird, floor;
 let flapMidImg, bg, base;
 let pipeGroup, pipe, bottomPipe, topPipe;
 let gameoverImg, gameoverLabel, startScreenLabel, startScreenImg;
-let st
+let startGame = false;
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
