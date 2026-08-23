@@ -74,7 +74,7 @@ function draw(){
     camera.x = bird.x;
     floor.x = bird.x;
 
-    if (frameCount % 15 === 0 ){
+    if (frameCount % 1 === 0 ){
         spawnPipePair();
     }
 
