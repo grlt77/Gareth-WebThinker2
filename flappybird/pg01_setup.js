@@ -56,11 +56,11 @@ function draw(){
     if (startGame){
     
         if (kb.presses('space')){
-        bird.vel.y = -3;
-        bird.sleeping = false;
-    }
+            bird.vel.y = -3;
+            bird.sleeping = false;
+        }
 
-    fill("blue");
+        fill("blue");
     textSize(14);
     text('vel.y: ' + bird.vel.y.toFixed(2), 10, 20);
     text('isMoving: ' + bird.isMoving,10,40);
