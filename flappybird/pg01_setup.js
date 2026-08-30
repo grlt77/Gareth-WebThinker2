@@ -114,7 +114,9 @@ function draw(){
             gameoverLabel.x = camera.x;
 
             noLoop();
+
         }
+        
 
     }
     
