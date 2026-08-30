@@ -142,5 +142,5 @@ function drawScore(){
     scoreDigits.removeAll();
     let scoreStr = str(score);
     let totalWidth = scoreStr.length * digitWidth;
-    let startX = X - 
+    let startX = X - totalWidth / 2;
 }
