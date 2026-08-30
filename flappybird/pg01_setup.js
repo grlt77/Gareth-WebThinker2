@@ -141,5 +141,6 @@ function spawnPipePair(){
 function drawScore(){
     scoreDigits.removeAll();
     let scoreStr = str(score);
-    let totalWidth = scoreStr.length * digit
+    let totalWidth = scoreStr.length * digitWidth;
+    let startX
 }
