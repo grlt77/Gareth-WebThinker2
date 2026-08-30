@@ -37,6 +37,8 @@ function setup(){
     floor.img = base;
 
     pipeGroup = new Group();
+
+    
 }
 
 function draw(){
