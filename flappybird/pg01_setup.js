@@ -137,3 +137,7 @@ function spawnPipePair(){
 
     pipeGroup.add(topPipe);
 }
+
+function drawScore(){
+    
+}
