@@ -140,7 +140,7 @@ function spawnPipePair(){
     pipeGroup.add(topPipe);
 }
 
-function drawScore(x, y,){
+function drawScore(x, y, score, digitWidth,){
     scoreDigits.removeAll();
     let scoreStr = str(score);
     let totalWidth = scoreStr.length * digitWidth;
