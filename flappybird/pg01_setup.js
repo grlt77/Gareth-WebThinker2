@@ -54,7 +54,7 @@ function draw(){
         startScreenLabel.visible = false
     }
     if (startGame){
-        bird.collider = ""
+        bird.collider = "dynamic"
     
         if (kb.presses('space')){
             bird.vel.y = -3;
