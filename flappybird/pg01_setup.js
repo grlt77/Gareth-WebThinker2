@@ -54,6 +54,7 @@ function draw(){
         startScreenLabel.visible = false
     }
     if (startGame){
+        bird.coll
     
         if (kb.presses('space')){
             bird.vel.y = -3;
