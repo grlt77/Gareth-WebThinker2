@@ -123,7 +123,7 @@ function draw(){
 
 function spawnPipePair(){
     let gap = 50;
-    let midY = random(250, height - 400)
+    let midY = random(250, height - 300)
 
     bottomPipe = new Sprite(bird.x + 400, midY + gap / 2 + 200, 52, 320, 'static');
     bottomPipe.img = pipe;
