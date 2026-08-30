@@ -116,7 +116,7 @@ function draw(){
             noLoop();
 
         }
-        drawScore(width)
+        drawScore(width/2, 20 )
 
     }
     
