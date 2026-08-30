@@ -140,5 +140,6 @@ function spawnPipePair(){
 
 function drawScore(){
     scoreDigits.removeAll();
-    let scoreStr = str()
+    let scoreStr = str(score);
+    
 }
