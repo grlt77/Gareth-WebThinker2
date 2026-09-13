@@ -136,6 +136,8 @@ function spawnPipePair(){
     topPipe.rotation = 180;
 
     pipeGroup.add(topPipe);
+
+top
 }
 
 function drawScore(x, y, score, digitWidth, digitHeight){
