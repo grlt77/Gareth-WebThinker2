@@ -120,6 +120,7 @@ function draw(){
             if (pipe.passed == false && pipeRightEdge < birdLeftEdge){
                 pipe.passed = true;
                 score++;
+                ga
             }
         }
 
@@ -168,7 +169,7 @@ function drawScore(x, y, score, digitWidth, digitHeight){
         let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight);
         digitSprite.img = numberImages[digit];
         moveGroup(scoreDigits, camera.x, 24);
-        
+
     }
 
     function moveGroup(group,targetX, spacing){
