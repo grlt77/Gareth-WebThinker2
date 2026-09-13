@@ -5,7 +5,7 @@ let gameoverImg, gameoverLabel, startScreenLabel, startScreenImg;
 let startGame = false;let score = 0;
 let numberImages = [];
 let scoreDigits;
-let flapWingSnd
+let flapWingSnd,plusPointSnd,
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
