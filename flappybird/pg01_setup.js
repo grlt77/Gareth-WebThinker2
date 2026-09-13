@@ -4,7 +4,8 @@ let pipeGroup, pipe, bottomPipe, topPipe;
 let gameoverImg, gameoverLabel, startScreenLabel, startScreenImg;
 let startGame = false;let score = 0;
 let numberImages = [];
-let scoreDigits,plusPointSnd;
+let scoreDigits;
+let 
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
