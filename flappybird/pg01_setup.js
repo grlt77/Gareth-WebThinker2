@@ -137,7 +137,7 @@ function spawnPipePair(){
 
     pipeGroup.add(topPipe);
 
-top
+topPipe.passed = false
 }
 
 function drawScore(x, y, score, digitWidth, digitHeight){
