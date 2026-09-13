@@ -70,7 +70,7 @@ function draw(){
         bird.collider = "dynamic"
     
         if (kb.presses('space')){
-            bird.vel.y = -10;
+            bird.vel.y = -5;
             bird.sleeping = false;
             flapWingSnd.play();
         }
