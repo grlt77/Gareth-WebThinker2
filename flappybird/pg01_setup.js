@@ -4,7 +4,7 @@ let pipeGroup, pipe, bottomPipe, topPipe;
 let gameoverImg, gameoverLabel, startScreenLabel, startScreenImg;
 let startGame = false;let score = 0;
 let numberImages = [];
-let scoreDigits;
+let scoreDigits,plusPointSnd;
 
 function preload() {
     flapMidImg = loadImage('assets/yellowbird-midflap.png');
@@ -71,7 +71,7 @@ function draw(){
         if (kb.presses('space')){
             bird.vel.y = -3;
             bird.sleeping = false;
-            
+
         }
 
         fill("blue");
