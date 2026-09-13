@@ -108,7 +108,7 @@ function draw(){
         }
 
         for (let pipe of pipeGroup) {
-            let pipeRightEdge = pipe.x
+            let pipeRightEdge = pipe.x + pipe.w
         }
 
         if (bird.collides(pipeGroup) || bird.collides(floor)){
