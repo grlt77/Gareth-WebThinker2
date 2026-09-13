@@ -18,7 +18,7 @@ function preload() {
     startScreenImg = loadImage('assets/message.png');
     flapWingSnd = createAudio('assets/sfx_wing.mp3')
     plusPointSnd = createAudio('assets/sfx_point.mp3')
-    dieSnd = createAudio('flappybird/assets/sfx_die.mp3')
+    dieSnd = createAudio('assets/sfx_die.mp3')
     for (let i = 0; i < 10; i++){
         numberImages[i] = loadImage('assets/' + i + '.png');
     }
