@@ -133,6 +133,8 @@ function draw(){
 
             noLoop();
 
+            setT
+
         }
         drawScore(width/2, 20, score, 24, 36);
 
