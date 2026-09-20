@@ -1,4 +1,4 @@
-let reels = [makeWheel(1), makeWheel(1), makeWheel(1)];
+let reels;
 let resultMessage = 'Press SPIN to play';
 let resultColor;
 let isSpinning = false;
@@ -24,6 +24,7 @@ function setup() {
 	createCanvas(720, 700);
 	textFont('Trebuchet MS');
 	resultColor = color('#ffe08a');
+	reels = [makeWheel(1), makeWheel(1), makeWheel(1)];
 	betInput = createInput('1000', 'number');
 	betInput.attribute('min', '1');
 	betInput.attribute('step', '100');
