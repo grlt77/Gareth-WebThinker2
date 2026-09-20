@@ -1,4 +1,4 @@
-let reels = [1, 1, 1];
+let reels = [makeWheel(1), makeWheel(1), makeWheel(1)];
 let resultMessage = 'Press SPIN to play';
 let resultColor;
 let isSpinning = false;
@@ -10,9 +10,9 @@ let stoppedReels = [false, false, false];
 let nextStopIndex = 0;
 const spinButton = { x: 0, y: 0, width: 190, height: 58 };
 const stopButtons = [
-	{ x: 140, y: 355, width: 120, height: 42 },
-	{ x: 300, y: 355, width: 120, height: 42 },
-	{ x: 460, y: 355, width: 120, height: 42 }
+	{ x: 140, y: 390, width: 120, height: 42 },
+	{ x: 300, y: 390, width: 120, height: 42 },
+	{ x: 460, y: 390, width: 120, height: 42 }
 ];
 const difficultyButtons = [
 	{ name: 'easy', label: 'EASY', maximum: 5, multiplier: 1.5, x: 190 },
@@ -21,7 +21,7 @@ const difficultyButtons = [
 ];
 
 function setup() {
-	createCanvas(720, 650);
+	createCanvas(720, 700);
 	textFont('Trebuchet MS');
 	resultColor = color('#ffe08a');
 	betInput = createInput('1000', 'number');
@@ -59,7 +59,7 @@ function drawMachine() {
 	fill('#f5e8ff');
 	textSize(16);
 	textStyle(NORMAL);
-	text('Stop each rolling wheel in order to match three numbers', width / 2, 124);
+	text('Stop each wheel to line up horizontal or diagonal matches', width / 2, 124);
 
 	fill('#f8c95c');
 	textSize(20);
@@ -69,14 +69,16 @@ function drawMachine() {
 	for (let index = 0; index < reels.length; index += 1) {
 		const x = 140 + index * 160;
 		fill('#f8f2ff');
-		rect(x, 185, 120, 130, 14);
+		rect(x, 165, 120, 210, 14);
 		fill('#321a48');
-		rect(x + 8, 193, 104, 114, 9);
+		rect(x + 8, 173, 104, 194, 9);
 
 		fill('#fff4c2');
-		textSize(58);
+		textSize(42);
 		textStyle(BOLD);
-		text(reels[index], x + 60, 250);
+		for (let row = 0; row < 3; row += 1) {
+			text(reels[index][row], x + 60, 205 + row * 64);
+		}
 
 		const stopButton = stopButtons[index];
 		const isActive = isSpinning && nextStopIndex === index;
@@ -89,7 +91,7 @@ function drawMachine() {
 	}
 
 	spinButton.x = width / 2 - spinButton.width / 2;
-	spinButton.y = 475;
+	spinButton.y = 465;
 	const buttonHovered = isPointerOverSpinButton();
 	const betAmount = getBetAmount();
 	fill(isSpinning || betAmount > balance ? '#74647d' : buttonHovered ? '#ffdb72' : '#f8c95c');
@@ -102,24 +104,24 @@ function drawMachine() {
 
 	for (const button of difficultyButtons) {
 		const isSelected = difficulty === button.name;
-		const isHovered = mouseX >= button.x && mouseX <= button.x + 110 && mouseY >= 440 && mouseY <= 474;
+		const isHovered = mouseX >= button.x && mouseX <= button.x + 110 && mouseY >= 540 && mouseY <= 574;
 		fill(isSelected ? '#f8c95c' : isHovered ? '#6e4b83' : '#432657');
-		rect(button.x, 440, 110, 34, 8);
+		rect(button.x, 540, 110, 34, 8);
 		fill(isSelected ? '#21132d' : '#f5e8ff');
 		textSize(14);
-		text(button.label, button.x + 55, 457);
+		text(button.label, button.x + 55, 557);
 	}
 
 	fill('#f5e8ff');
 	textSize(15);
 	textStyle(NORMAL);
 	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
-	text(`Three matching numbers pays ${selectedDifficulty.multiplier}x`, width / 2, 455);
+	text(`Each horizontal or diagonal line pays ${selectedDifficulty.multiplier}x`, width / 2, 515);
 
 	fill(resultColor);
 	textSize(22);
 	textStyle(BOLD);
-	text(resultMessage, width / 2, 610);
+	text(resultMessage, width / 2, 650);
 }
 
 function animateSpin() {
@@ -129,7 +131,7 @@ function animateSpin() {
 
 	for (let index = 0; index < reels.length; index += 1) {
 		if (!stoppedReels[index]) {
-			reels[index] = reels[index] >= getMaximumValue() ? 1 : reels[index] + 1;
+			reels[index] = reels[index].map((value) => value >= getMaximumValue() ? 1 : value + 1);
 		}
 	}
 }
@@ -147,6 +149,7 @@ function mousePressed() {
 		}
 
 		balance -= betAmount;
+		reels = reels.map(() => makeWheel(randomReelValue()));
 		isSpinning = true;
 		stoppedReels = [false, false, false];
 		nextStopIndex = 0;
@@ -168,7 +171,7 @@ function mousePressed() {
 	}
 
 	for (const button of difficultyButtons) {
-		if (mouseX >= button.x && mouseX <= button.x + 110 && mouseY >= 440 && mouseY <= 474 && !isSpinning) {
+		if (mouseX >= button.x && mouseX <= button.x + 110 && mouseY >= 540 && mouseY <= 574 && !isSpinning) {
 			difficulty = button.name;
 			resultMessage = `${button.label} mode: numbers 1-${button.maximum}`;
 			resultColor = color('#ffe08a');
@@ -179,6 +182,11 @@ function mousePressed() {
 
 function randomReelValue() {
 	return floor(random(1, getMaximumValue() + 1));
+}
+
+function makeWheel(startValue) {
+	const maximum = getMaximumValue();
+	return [0, 1, 2].map((offset) => ((startValue - 1 + offset) % maximum) + 1);
 }
 
 function getMaximumValue() {
@@ -192,14 +200,26 @@ function getBetAmount() {
 
 function finishSpin() {
 	isSpinning = false;
-	const jackpot = reels[0] === reels[1] && reels[1] === reels[2];
+	const winningLines = getWinningLines();
 	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
-	const winnings = jackpot ? getBetAmount() * selectedDifficulty.multiplier : 0;
+	const winnings = getBetAmount() * selectedDifficulty.multiplier * winningLines.length;
 	balance += winnings;
-	resultMessage = jackpot
-		? `JACKPOT! You won $${winnings.toLocaleString()}!`
+	resultMessage = winningLines.length > 0
+		? `${winningLines.length} winning line${winningLines.length === 1 ? '' : 's'}! You won $${winnings.toLocaleString()}!`
 		: 'No match this time. Try again!';
-	resultColor = jackpot ? color('#ffe08a') : color('#f0c6ff');
+	resultColor = winningLines.length > 0 ? color('#ffe08a') : color('#f0c6ff');
+}
+
+function getWinningLines() {
+	const lines = [
+		[reels[0][0], reels[1][0], reels[2][0]],
+		[reels[0][1], reels[1][1], reels[2][1]],
+		[reels[0][2], reels[1][2], reels[2][2]],
+		[reels[0][0], reels[1][1], reels[2][2]],
+		[reels[0][2], reels[1][1], reels[2][0]]
+	];
+
+	return lines.filter(([first, second, third]) => first === second && second === third);
 }
 
 function isPointerOverSpinButton() {
