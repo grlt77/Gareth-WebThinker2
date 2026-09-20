@@ -9,8 +9,8 @@ function preload(){
         whole:loadImage('assets/peachwhole.png')
     };
     watermelon = {
-        whole: loadImage('assets/watermelonwhole')
-    }
+        whole: loadImage('assets/watermelonwhole.png')
+    };
     peach['whole']
 }
 function setup() {
