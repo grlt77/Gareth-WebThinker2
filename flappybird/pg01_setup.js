@@ -155,46 +155,46 @@ function draw() {
         }
     }
 
-function spawnPipePair() {
-    let gap = 50;
-    let midY = random(250, height - 150)
+    function spawnPipePair() {
+        let gap = 50;
+        let midY = random(250, height - 150)
 
-    bottomPipe = new Sprite(bird.x + 400, midY + gap / 2 + 200, 52, 320, 'static');
-    bottomPipe.img = pipe;
+        bottomPipe = new Sprite(bird.x + 400, midY + gap / 2 + 200, 52, 320, 'static');
+        bottomPipe.img = pipe;
 
-    pipeGroup.add(bottomPipe);
-    pipeGroup.layer = 0;
+        pipeGroup.add(bottomPipe);
+        pipeGroup.layer = 0;
 
-    topPipe = new Sprite(bird.x + 400, midY - gap / 2 - 200, 52, 320, 'static');
-    topPipe.img = pipe;
-    topPipe.rotation = 180;
+        topPipe = new Sprite(bird.x + 400, midY - gap / 2 - 200, 52, 320, 'static');
+        topPipe.img = pipe;
+        topPipe.rotation = 180;
 
-    pipeGroup.add(topPipe);
+        pipeGroup.add(topPipe);
 
-    topPipe.passed = false;
-}
-
-function drawScore(x, y, score, digitWidth, digitHeight) {
-    scoreDigits.removeAll();
-    let scoreStr = str(score);
-    let totalWidth = scoreStr.length * digitWidth;
-    let startX = x - totalWidth / 2;
-    for (let i = 0; i < scoreStr.length; i++) {
-        let digit = int(scoreStr[i]);
-        let xPos = startX + i * digitWidth;
-        let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight);
-        digitSprite.img = numberImages[digit];
-        moveGroup(scoreDigits, camera.x, 24);
-
+        topPipe.passed = false;
     }
-}
 
-function moveGroup(group, targetX, spacing) {
-    let totalWidth = (group.length - 1) * spacing;
-    let startX = (targetX - totalWidth / 2);
-    for (let i = 0; i < group.length; i++) {
-        group[i].x = startX + i * spacing;
+    function drawScore(x, y, score, digitWidth, digitHeight) {
+        scoreDigits.removeAll();
+        let scoreStr = str(score);
+        let totalWidth = scoreStr.length * digitWidth;
+        let startX = x - totalWidth / 2;
+        for (let i = 0; i < scoreStr.length; i++) {
+            let digit = int(scoreStr[i]);
+            let xPos = startX + i * digitWidth;
+            let digitSprite = new scoreDigits.Sprite(xPos, y, digitWidth, digitHeight);
+            digitSprite.img = numberImages[digit];
+            moveGroup(scoreDigits, camera.x, 24);
+
+        }
     }
-}
+
+    function moveGroup(group, targetX, spacing) {
+        let totalWidth = (group.length - 1) * spacing;
+        let startX = (targetX - totalWidth / 2);
+        for (let i = 0; i < group.length; i++) {
+            group[i].x = startX + i * spacing;
+        }
+    }
 
 }
