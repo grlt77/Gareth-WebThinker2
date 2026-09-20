@@ -7,7 +7,7 @@ function preload(){
     dojoBG = loadImage('assets/dojobackground.png');
     peach = {
         whole:loadImage('assets/peachwhole.png')
-    }
+    };
 }
 function setup() {
     createCanvas(600, 400);
