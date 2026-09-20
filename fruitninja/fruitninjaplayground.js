@@ -9,7 +9,7 @@ function preload(){
         whole:loadImage('assets/peachwhole.png')
     };
     watermelon = {
-        whole: load
+        whole: loadImage('asser')
     }
     peach['whole']
 }
