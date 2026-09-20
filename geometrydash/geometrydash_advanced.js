@@ -5,19 +5,27 @@ let isSpinning = false;
 let spinStartedAt = 0;
 let balance = 100000;
 let difficulty = 'easy';
+let betInput;
 const spinDuration = 900;
-const spinCost = 1000;
 const spinButton = { x: 0, y: 0, width: 190, height: 58 };
 const difficultyButtons = [
-	{ name: 'easy', label: 'EASY', maximum: 5, x: 190 },
-	{ name: 'medium', label: 'MEDIUM', maximum: 7, x: 305 },
-	{ name: 'hard', label: 'HARD', maximum: 10, x: 420 }
+	{ name: 'easy', label: 'EASY', maximum: 5, multiplier: 1.5, x: 190 },
+	{ name: 'medium', label: 'MEDIUM', maximum: 7, multiplier: 2, x: 305 },
+	{ name: 'hard', label: 'HARD', maximum: 10, multiplier: 3, x: 420 }
 ];
 
 function setup() {
 	createCanvas(720, 520);
 	textFont('Trebuchet MS');
 	resultColor = color('#ffe08a');
+	betInput = createInput('1000', 'number');
+	betInput.attribute('min', '1');
+	betInput.attribute('step', '100');
+	betInput.attribute('aria-label', 'Bet amount');
+	betInput.style('font-size', '18px');
+	betInput.style('padding', '8px 10px');
+	betInput.style('width', '150px');
+	betInput.style('text-align', 'center');
 }
 
 function draw() {
@@ -67,13 +75,14 @@ function drawMachine() {
 	spinButton.x = width / 2 - spinButton.width / 2;
 	spinButton.y = 388;
 	const buttonHovered = isPointerOverSpinButton();
-	fill(isSpinning || balance < spinCost ? '#74647d' : buttonHovered ? '#ffdb72' : '#f8c95c');
+	const betAmount = getBetAmount();
+	fill(isSpinning || betAmount > balance ? '#74647d' : buttonHovered ? '#ffdb72' : '#f8c95c');
 	rect(spinButton.x, spinButton.y, spinButton.width, spinButton.height, 12);
 
 	fill('#21132d');
 	textSize(24);
 	textStyle(BOLD);
-	text(isSpinning ? 'SPINNING...' : balance < spinCost ? 'NO FUNDS' : 'SPIN', width / 2, spinButton.y + spinButton.height / 2);
+	text(isSpinning ? 'SPINNING...' : betAmount > balance ? 'NO FUNDS' : 'SPIN', width / 2, spinButton.y + spinButton.height / 2);
 
 	for (const button of difficultyButtons) {
 		const isSelected = difficulty === button.name;
@@ -84,6 +93,11 @@ function drawMachine() {
 		textSize(14);
 		text(button.label, button.x + 55, 357);
 	}
+
+	fill('#f5e8ff');
+	textSize(15);
+	textStyle(NORMAL);
+	text('BET AMOUNT', width / 2, 350);
 
 	fill(resultColor);
 	textSize(22);
@@ -105,7 +119,8 @@ function animateSpin() {
 	isSpinning = false;
 	const matchingPair = reels[0] === reels[1] || reels[1] === reels[2] || reels[0] === reels[2];
 	const jackpot = reels[0] === reels[1] && reels[1] === reels[2];
-	const winnings = jackpot ? spinCost * 10 : matchingPair ? spinCost * 2 : 0;
+	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
+	const winnings = jackpot ? getBetAmount() * selectedDifficulty.multiplier : matchingPair ? getBetAmount() * 1.25 : 0;
 	balance += winnings;
 	resultMessage = jackpot
 		? `JACKPOT! You won $${winnings.toLocaleString()}!`
@@ -117,12 +132,17 @@ function animateSpin() {
 
 function mousePressed() {
 	if (!isSpinning && isPointerOverSpinButton()) {
-		if (balance < spinCost) {
-			resultMessage = 'You need $1,000 to spin.';
+		const betAmount = getBetAmount();
+		if (betAmount <= 0) {
+			resultMessage = 'Enter a valid bet amount.';
+			return;
+		}
+		if (balance < betAmount) {
+			resultMessage = 'Your bet is higher than your balance.';
 			return;
 		}
 
-		balance -= spinCost;
+		balance -= betAmount;
 		isSpinning = true;
 		spinStartedAt = millis();
 		resultMessage = 'Good luck!';
@@ -143,6 +163,10 @@ function mousePressed() {
 function randomReelValue() {
 	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
 	return floor(random(1, selectedDifficulty.maximum + 1));
+}
+
+function getBetAmount() {
+	return max(0, floor(Number(betInput.value()) || 0));
 }
 
 function isPointerOverSpinButton() {
