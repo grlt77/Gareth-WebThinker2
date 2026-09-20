@@ -11,7 +11,7 @@ function preload(){
     watermelon = {
         whole: loadImage('assets/watermelonwhole.png')
     };
-    fruitTypes = 
+    fruitTypes = [peach,watermelon];
 }
 function setup() {
     createCanvas(600, 400);
