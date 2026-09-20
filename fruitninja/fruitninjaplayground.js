@@ -1,4 +1,5 @@
 let dojoBG;
+let fruit
 
 function preload(){
     dojoBG = loadImage('assets/dojobackground.png');
