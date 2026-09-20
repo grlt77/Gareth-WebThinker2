@@ -6,7 +6,7 @@ let peach;
 function preload(){
     dojoBG = loadImage('assets/dojobackground.png');
     peach = {
-        whole:loadImage('assets/')
+        whole:loadImage('assets/peachwhole.png')
     }
 }
 function setup() {
