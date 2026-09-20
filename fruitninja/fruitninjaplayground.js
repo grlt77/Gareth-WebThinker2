@@ -8,6 +8,7 @@ function preload(){
     peach = {
         whole:loadImage('assets/peachwhole.png')
     };
+    peach['whole']
 }
 function setup() {
     createCanvas(600, 400);
