@@ -21,6 +21,7 @@ function setup() {
 	betInput = createInput('1000', 'number');
 	betInput.attribute('min', '1');
 	betInput.attribute('step', '100');
+	betInput.attribute('placeholder', 'Bet amount ($)');
 	betInput.attribute('aria-label', 'Bet amount');
 	betInput.style('font-size', '18px');
 	betInput.style('padding', '8px 10px');
@@ -97,7 +98,8 @@ function drawMachine() {
 	fill('#f5e8ff');
 	textSize(15);
 	textStyle(NORMAL);
-	text('BET AMOUNT', width / 2, 350);
+	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
+	text(`Three of a kind pays ${selectedDifficulty.multiplier}x`, width / 2, 330);
 
 	fill(resultColor);
 	textSize(22);
@@ -117,17 +119,14 @@ function animateSpin() {
 
 	reels = reels.map(() => randomReelValue());
 	isSpinning = false;
-	const matchingPair = reels[0] === reels[1] || reels[1] === reels[2] || reels[0] === reels[2];
 	const jackpot = reels[0] === reels[1] && reels[1] === reels[2];
 	const selectedDifficulty = difficultyButtons.find((button) => button.name === difficulty);
-	const winnings = jackpot ? getBetAmount() * selectedDifficulty.multiplier : matchingPair ? getBetAmount() * 1.25 : 0;
+	const winnings = jackpot ? getBetAmount() * selectedDifficulty.multiplier : 0;
 	balance += winnings;
 	resultMessage = jackpot
 		? `JACKPOT! You won $${winnings.toLocaleString()}!`
-		: matchingPair
-			? `Pair matched! You won $${winnings.toLocaleString()}!`
-			: 'No match this time. Try again!';
-	resultColor = jackpot || matchingPair ? color('#ffe08a') : color('#f0c6ff');
+		: 'No match this time. Try again!';
+	resultColor = jackpot ? color('#ffe08a') : color('#f0c6ff');
 }
 
 function mousePressed() {
