@@ -8,7 +8,9 @@ function preload(){
     peach = {
         whole:loadImage('assets/peachwhole.png')
     };
-    watermelon = 
+    watermelon = {
+        whole: load
+    }
     peach['whole']
 }
 function setup() {
