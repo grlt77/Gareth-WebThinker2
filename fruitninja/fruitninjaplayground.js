@@ -24,7 +24,9 @@ function draw() {
     }
     if (mouse.presses()) {
         let trail = new Sprite(mouse.x, mouse.y, 7);
-        trail.collider
+        trail.collider = 'none';
+        trail.color = 'green';
+        
     }
 }
 
