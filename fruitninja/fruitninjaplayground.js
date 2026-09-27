@@ -23,7 +23,7 @@ function draw() {
         spawnFruit();
     }
     if (mouse.presses()) {
-        let trail = new S
+        let trail = new Sprite(mouse.x, mouse.y, )
     }
 }
 
