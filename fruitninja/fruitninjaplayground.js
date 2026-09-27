@@ -22,7 +22,7 @@ function draw() {
     if (frameCount % 120 === 0){
         spawnFruit();
     }
-    if (mouse.presses()) {
+    if (mouse.pressing()) {
         let trail = new Sprite(mouse.x, mouse.y, 7);
         trail.collider = 'none';
         trail.color = 'green';
