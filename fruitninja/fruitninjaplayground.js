@@ -45,6 +45,10 @@ function sliceFruit(){
         if (fruit.slice) {
             continue;
         }
-        let d = dist(mouse.x, mouse.y, fruit.x, fruit.y)
+        let d = dist(mouse.x, mouse.y, fruit.x, fruit.y);
+
+        if(d< ((fruit.d/2)+3)){
+            fruit
+        }
     }
 }
