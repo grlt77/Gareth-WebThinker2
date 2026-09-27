@@ -67,6 +67,6 @@ function sliceFruit(){
     }
 }
 
-function splitFruit(x,y,ata){
-
+function splitFruit(x,y,Data){
+    
 }
