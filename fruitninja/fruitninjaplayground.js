@@ -13,7 +13,7 @@ function preload(){
     watermelon = {
         whole: loadImage('assets/watermelonwhole.png'),
         half1: loadImage('assets/watermelonhalf.png'),
-        h
+        half1: loadImage('assets')
     };
     fruitTypes = [peach,watermelon];
 }
