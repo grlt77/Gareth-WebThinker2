@@ -27,6 +27,8 @@ function draw() {
         trail.collider = 'none';
         trail.color = 'green';
         trail.life = 10;
+
+        sli'
     }
 }
 
