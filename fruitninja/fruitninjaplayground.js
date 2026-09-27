@@ -45,6 +45,6 @@ function sliceFruit(){
         if (fruit.slice) {
             continue;
         }
-        let
+        let d = dist
     }
 }
