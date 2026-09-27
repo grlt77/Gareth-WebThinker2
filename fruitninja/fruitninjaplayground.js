@@ -68,5 +68,5 @@ function sliceFruit(){
 }
 
 function splitFruit(x,y,Data){
-    let left = new fruit
+    let left = new fruitHalves.Sprite
 }
