@@ -16,7 +16,7 @@ function preload(){
 function setup() {
     createCanvas(600, 400);
     world.gravity.y = 10;
-    fruitGroup = new fruitGroup();
+    fruitGroup = new Group();
 }
 function draw() {
     image(dojoBG,0,0,width,height)
