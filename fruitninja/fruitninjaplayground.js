@@ -67,7 +67,7 @@ function sliceFruit(){
     }
 }
 
-function splitFruit(x,y,Data){
+function splitFruit(x,y,fruitData){
     let left = new Sprite(x - 10 ,y,40,40);
     left.img = fruitData.half1;
     left.vel.x = -3;
