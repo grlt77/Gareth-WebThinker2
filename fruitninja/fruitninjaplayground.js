@@ -28,7 +28,7 @@ function draw() {
         trail.color = 'green';
         trail.life = 10;
 
-        sli'
+        sliceFruit();
     }
 }
 
