@@ -21,6 +21,7 @@ function setup() {
     createCanvas(600, 400);
     world.gravity.y = 10;
     fruitGroup = new Group();
+    fruitHalf
 }
 function draw() {
     image(dojoBG,0,0,width,height)
