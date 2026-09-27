@@ -66,3 +66,7 @@ function sliceFruit(){
         }
     }
 }
+
+function splitFruit(){
+    
+}
