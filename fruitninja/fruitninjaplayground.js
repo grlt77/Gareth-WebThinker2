@@ -30,7 +30,8 @@ function setup() {
 function draw() {
     image(dojoBG,0,0,width,height)
     if (kb.presses(' ') || mouse.presse() && (gameState === 'start')){
-        
+        gameState = 'play';
+        score
     }
     if (gameState === 'start') {
         fill(0,100);
