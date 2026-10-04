@@ -52,6 +52,7 @@ function trackMissedFruits(){
     for (let fruit of fruitGroup) {
         if (fruit.y > height + 50) {
             fruit.remove();
+            missed +=1
         }
     }
 }
