@@ -39,6 +39,9 @@ function draw() {
     }
     stroke(158,70,70);
     fill(255)
+    textSize(24
+        
+    )
 }
 
 function spawnFruit(){
