@@ -48,6 +48,12 @@ function draw() {
     
 }
 
+function trackMissedFruits(){
+    for (let fruit of fruitGroup) {
+        
+    }
+}
+
 function spawnFruit(){
     let fruitData =random(fruitTypes);
     let randomx = random(300,500);
