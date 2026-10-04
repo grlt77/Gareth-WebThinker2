@@ -36,7 +36,7 @@ function draw() {
         textSize(48);
         text('fruit Ninja',width/2,height/2, - 40);
         textSize(24);
-        text
+        text('Press SPACE ')
     }
     if (frameCount % 120 === 0){
         spawnFruit();
