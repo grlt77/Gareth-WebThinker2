@@ -46,7 +46,7 @@ function draw() {
     text('Score: ' + score,10,10)
 
     trackMissedFruits();
-    text('missed:')
+    text('missed: ' + missed ,200,10)
 }
 
 function trackMissedFruits(){
