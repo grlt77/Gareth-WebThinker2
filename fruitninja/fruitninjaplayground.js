@@ -28,7 +28,9 @@ function setup() {
 }
 function draw() {
     image(dojoBG,0,0,width,height)
-    if (gameState === 'start')
+    if (gameState === 'start') {
+        
+    }
     if (frameCount % 120 === 0){
         spawnFruit();
     }
