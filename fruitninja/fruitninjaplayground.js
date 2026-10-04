@@ -34,7 +34,7 @@ function draw() {
         fill(255);
         textAlign(CENTER,CENTER);
         textSize(48);
-        text()
+        text('fruit Ninja')
     }
     if (frameCount % 120 === 0){
         spawnFruit();
