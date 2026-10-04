@@ -44,6 +44,8 @@ function draw() {
     textSize(24);
     textAlign(LEFT,TOP);
     text('Score: ' + score,10,10)
+
+    
 }
 
 function spawnFruit(){
@@ -91,3 +93,4 @@ function splitFruit(x,y,fruitData){
     right.rotationSpeed = 5;
     right.life = 30;
 }
+
