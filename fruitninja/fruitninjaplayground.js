@@ -45,7 +45,8 @@ function draw() {
     textAlign(LEFT,TOP);
     text('Score: ' + score,10,10)
 
-    
+    trackMissedFruits();
+    text
 }
 
 function trackMissedFruits(){
