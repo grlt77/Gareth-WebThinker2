@@ -84,9 +84,9 @@ function draw() {
         fill(255);
         textAlign(CENTER,CENTER);
         textSize(48);
-        text('GAME OVER',width/2,height/2 - 40);
+        text('GAME OVER',width/2,height/2 - 60);
         textSize(24);
-        text('Score: ' + score,width/2,height/2 + 20);
+        text('Score: ' + score,width/2,height/2);
         text('Missed Fruits; ' + missed,width/2)
         return;
     }
