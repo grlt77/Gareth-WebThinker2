@@ -75,7 +75,7 @@ function draw() {
     gameTimer = millis() - startGameTime;
     text('Time: ' + floor(gameDuration - gameTimer / 1000),400,10);
     if (gameTimer >= gameDuration){
-        gameState = gameOver
+        gameState = gameOver;
     }
     
 }
