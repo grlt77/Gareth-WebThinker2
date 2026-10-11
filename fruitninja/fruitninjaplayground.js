@@ -39,7 +39,7 @@ function draw() {
         missed = 0;
         fruitGroup.removeAll();
         fruitHalves.removeAll();
-        let startGameTime = millis();
+        startGameTime = millis();
         gameTimer = 0 + startGameTime
     }
     if (gameState === 'start') {
