@@ -6,7 +6,7 @@ let fruitHalves;
 let score = 0;
 let missed = 0;
 let gameState = 'start';
-let gameDuration = (90 / 1000);
+let gameDuration = 90;
 let gameTimer = startGameTime + 1
 
 
@@ -39,7 +39,7 @@ function draw() {
         fruitGroup.removeAll();
         fruitHalves.removeAll();
         let startGameTime = millis();
-        
+
     }
     if (gameState === 'start') {
         fill(0,100);
