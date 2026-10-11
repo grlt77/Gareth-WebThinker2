@@ -84,7 +84,7 @@ function draw() {
         fill(255);
         textAlign(CENTER,CENTER);
         textSize(48);
-        text('fruit Ninja',width/2,height/2 - 40);
+        text('GAME OVER',width/2,height/2 - 40);
         textSize(24);
         text('GAME OVER',width/2,height/2 + 20);
         return;
