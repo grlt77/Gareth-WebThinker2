@@ -74,7 +74,7 @@ function draw() {
     text('missed: ' + missed ,200,10)
     gameTimer = millis() - startGameTime;
     text('Time: ' + floor(gameDuration - gameTimer / 1000),400,10);
-    
+
     if (gameTimer / 1000 >= gameDuration){
         gameState = 'gameOver';
         return;
@@ -89,7 +89,7 @@ function draw() {
         textSize(24);
         text('Score: ' + score,width/2,height/2);
         text('Missed Fruits; ' + missed,width/2, height +80);
-        text('Press SPACE')
+        text('Press SPACE or CLICK to restart')
         return;
     }
 }
