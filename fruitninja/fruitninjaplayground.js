@@ -77,7 +77,7 @@ function draw() {
     if (gameTimer >= gameDuration){
         gameState = gameOver;
     }
-    
+    if (gameState = gameOver)
 }
 
 function trackMissedFruits(){
