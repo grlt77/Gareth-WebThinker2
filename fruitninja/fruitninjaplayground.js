@@ -86,7 +86,7 @@ function draw() {
         textSize(48);
         text('GAME OVER',width/2,height/2 - 40);
         textSize(24);
-        text('GAME OVER',width/2,height/2 + 20);
+        text('Score',width/2,height/2 + 20);
         return;
     }
 }
