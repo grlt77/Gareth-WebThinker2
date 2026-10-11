@@ -73,7 +73,7 @@ function draw() {
     trackMissedFruits();
     text('missed: ' + missed ,200,10)
     gameTimer = millis() - startGameTime;
-    text('Time: ' + gameDuration - ga)
+    text('Time: ' + gameDuration - gameTimer)
     
 }
 
