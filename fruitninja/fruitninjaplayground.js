@@ -88,7 +88,7 @@ function draw() {
         textSize(24);
         text('Score: ' + score,width/2,height/2);
         text('Missed Fruits; ' + missed,width/2, height +80);
-        text('Press')
+        text('Press SPACE')
         return;
     }
 }
