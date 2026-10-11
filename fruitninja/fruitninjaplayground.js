@@ -6,7 +6,6 @@ let fruitHalves;
 let score = 0;
 let missed = 0;
 let gameState = 'start';
-let startGameTime = millis();
 let gameDuration = (90 / 1000);
 let gameTimer = startGameTime + 1
 
