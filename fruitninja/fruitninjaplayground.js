@@ -74,7 +74,9 @@ function draw() {
     text('missed: ' + missed ,200,10)
     gameTimer = millis() - startGameTime;
     text('Time: ' + floor(gameDuration - gameTimer / 1000),400,10);
-    if (gameTimer >= gameDuration){}
+    if (gameTimer >= gameDuration){
+        gameState = gameOver
+    }
     
 }
 
