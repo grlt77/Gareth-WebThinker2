@@ -8,7 +8,7 @@ let missed = 0;
 let gameState = 'start';
 let startGameTime = millis();
 let gameDuration = (90 / 1000);
-let gameTimer = 
+let gameTimer = 0.
 
 
 function preload(){
