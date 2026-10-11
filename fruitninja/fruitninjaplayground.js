@@ -78,7 +78,7 @@ function draw() {
         gameState = gameOver;
         return;
     }
-    if (gameState = gameOver){
+    if (gameState === gameOver){
         fill(0,100);
         rect(0,0,width,height);
         fill(255);
