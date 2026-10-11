@@ -38,6 +38,7 @@ function draw() {
         missed = 0;
         fruitGroup.removeAll();
         fruitHalves.removeAll();
+        
     }
     if (gameState === 'start') {
         fill(0,100);
@@ -70,7 +71,7 @@ function draw() {
     trackMissedFruits();
     text('missed: ' + missed ,200,10)
     
-    
+
 }
 
 function trackMissedFruits(){
