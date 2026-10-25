@@ -10,6 +10,7 @@ let gameDuration = 5;
 let gameTimer = 0;
 let startGameTime = 0;
 let sliceSound;
+let bgSound;
 
 
 function preload(){
