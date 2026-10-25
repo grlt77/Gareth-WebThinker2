@@ -6,7 +6,7 @@ let fruitHalves;
 let score = 0;
 let missed = 0;
 let gameState = 'start';
-let gameDuration = 5;
+let gameDuration = 120;
 let gameTimer = 0;
 let startGameTime = 0;
 let sliceSound;
