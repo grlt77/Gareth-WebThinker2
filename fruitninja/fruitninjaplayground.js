@@ -53,6 +53,9 @@ function draw() {
         text('Press SPACE or CLICK to start',width/2,height/2 + 20);
         return;
     }
+
+    
+
     if (frameCount % 120 === 0){
         spawnFruit();
     }
