@@ -11,8 +11,8 @@ let gameTimer = 0;
 let startGameTime = 0;
 let sliceSound;
 let bgSound;
-let numOfFruits = 1
-let lastTimeAdded = 1
+let numOfFruits = 1;
+let lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong = 0;
 
 
 function preload(){
@@ -47,6 +47,7 @@ function draw() {
         fruitHalves.removeAll();
         startGameTime = millis();
         bgSound.loop();
+        numOfFruits = 1;
         
     }
     if (gameState === 'start') {
@@ -77,7 +78,8 @@ function draw() {
     }
 
     if (frameCount % 120 === 0){
-        spawnFruit();
+        
+        spawnFruit()
     }
     if (mouse.pressing()) {
         let trail = new Sprite(mouse.x, mouse.y, 7);
