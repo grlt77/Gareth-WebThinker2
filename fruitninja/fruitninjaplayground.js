@@ -25,7 +25,7 @@ function preload(){
         half2: loadImage('assets/watermelonhalf.png'),
     };
     fruitTypes = [peach,watermelon];
-    sliceSound = loadSound('fruitninja/assets/fruit-ninja-combo.mp3')
+    sliceSound = loadSound('assets/fruit-ninja-combo.mp3');
 }
 function setup() {
     createCanvas(600, 400);
@@ -147,6 +147,7 @@ function sliceFruit(){
             fruit.remove();
             splitFruit(fx,fy,fruit.type);
             score += 1;
+            sliceSound.soundEffect.play();
             break;
         }
     }
