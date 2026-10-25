@@ -25,7 +25,7 @@ function preload(){
         half2: loadImage('assets/watermelonhalf.png'),
     };
     fruitTypes = [peach,watermelon];
-    
+    sliceSound
 }
 function setup() {
     createCanvas(600, 400);
