@@ -27,7 +27,7 @@ function preload(){
     };
     fruitTypes = [peach,watermelon];
     sliceSound = loadSound('assets/fruit-ninja-combo.mp3');
-    bgSound = 
+    bgSound = loadSound('')
 }
 function setup() {
     createCanvas(600, 400);
