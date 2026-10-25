@@ -85,7 +85,8 @@ function draw() {
     }
 
     if(gameTimer - lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong >= 1){
-        numOfFruits 
+        numOfFruits = numOfFruits * 2;
+        lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong
     }
     if (mouse.pressing()) {
         let trail = new Sprite(mouse.x, mouse.y, 7);
