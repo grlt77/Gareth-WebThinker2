@@ -11,7 +11,8 @@ let gameTimer = 0;
 let startGameTime = 0;
 let sliceSound;
 let bgSound;
-let numOfFruits = 
+let numOfFruits = 1
+let 
 
 
 function preload(){
