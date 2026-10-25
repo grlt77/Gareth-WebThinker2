@@ -147,7 +147,7 @@ function sliceFruit(){
             fruit.remove();
             splitFruit(fx,fy,fruit.type);
             score += 1;
-            sliceSound.soundEffect.play();
+            sliceSound.play();
             break;
         }
     }
