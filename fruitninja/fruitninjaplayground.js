@@ -85,7 +85,7 @@ function draw() {
     }
 
     if(gameTimer - lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong >= 1){
-        numOfFruits = numOfFruits * 2;
+        numOfFruits += 1;
         lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong = gameTimer;
     }
     if (mouse.pressing()) {
