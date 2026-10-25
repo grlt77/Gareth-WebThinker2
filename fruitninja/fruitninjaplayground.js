@@ -25,7 +25,7 @@ function preload(){
         half2: loadImage('assets/watermelonhalf.png'),
     };
     fruitTypes = [peach,watermelon];
-    sliceSound = load
+    sliceSound = loadSound('fruitninja/assets/fruit-ninja-combo.mp3')
 }
 function setup() {
     createCanvas(600, 400);
