@@ -70,7 +70,7 @@ function draw() {
         text('Score: ' + score,width/2,height/2);
         text('Missed Fruits; ' + missed,width/2, height +60);
         text('Press SPACE or CLICK to restart',width/2,height+80);
-        bgSound.
+        bgSound.stop();
         return;
     }
 
