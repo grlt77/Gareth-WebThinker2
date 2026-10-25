@@ -84,7 +84,7 @@ function draw() {
         
     }
 
-    if(gameTimer - lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong >= 1){
+    if(gameTimer - lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong >= 15){
         numOfFruits += 1;
         lastTimeAFruitWasMultipliedByFunctionsAndThisIsVeryLong = gameTimer;
     }
