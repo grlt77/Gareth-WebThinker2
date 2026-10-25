@@ -9,6 +9,7 @@ let gameState = 'start';
 let gameDuration = 5;
 let gameTimer = 0;
 let startGameTime = 0;
+let sliceSound;
 
 
 function preload(){
