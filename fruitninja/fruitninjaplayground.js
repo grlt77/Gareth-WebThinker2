@@ -12,7 +12,7 @@ let startGameTime = 0;
 let sliceSound;
 let bgSound;
 let numOfFruits = 1
-let lastTime
+let lastTimeAdded = 1
 
 
 function preload(){
