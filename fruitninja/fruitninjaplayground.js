@@ -44,6 +44,7 @@ function draw() {
         fruitGroup.removeAll();
         fruitHalves.removeAll();
         startGameTime = millis();
+        bgSound.loop()
         
     }
     if (gameState === 'start') {
