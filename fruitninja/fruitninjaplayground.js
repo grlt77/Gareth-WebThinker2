@@ -104,7 +104,7 @@ function draw() {
 
     trackMissedFruits();
     text('missed: ' + missed ,200,10)
-    gameTimer = floor(millis() - startGameTime) / 1000;
+    gameTimer = floor((millis() - startGameTime) / 1000);
     text('Time: ' + (gameDuration - gameTimer),400,10);
 
     if (gameState === 'gameOver'){
