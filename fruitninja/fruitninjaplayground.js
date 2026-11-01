@@ -121,7 +121,7 @@ function draw() {
         return;
     }
 
-    if (gameTimer / 1000 >= gameDuration){
+    if (gameTimer >= gameDuration){
         gameState = 'gameOver';
         return;
     }
