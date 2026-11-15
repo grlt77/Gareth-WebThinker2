@@ -259,9 +259,9 @@ function drawTopBar() {
   textSize(13);
   text(`${maps[selectedMap].name}  ·  ${difficulties[selectedDifficulty].name}`, 22, 52);
 
-  drawTopStat('GOLD', `$${gold}`, 390, '#f4d276');
-  drawTopStat('LIVES', `${lives}`, 555, '#ed8b76');
-  drawTopStat('WAVE', currentWave ? `${currentWave} / ${TOTAL_WAVES}` : `Ready / ${TOTAL_WAVES}`, 715, '#9fd489');
+  drawTopStat('GOLD', `$${gold}`, 355, '#f4d276');
+  drawTopStat('LIVES', `${lives}`, 495, '#ed8b76');
+  drawTopStat('WAVE', currentWave ? `${currentWave} / ${TOTAL_WAVES}` : `Ready / ${TOTAL_WAVES}`, 625, '#9fd489');
 }
 
 function drawTopStat(label, value, x, color) {
@@ -349,12 +349,6 @@ function drawPath() {
 
 function drawTower(tower) {
   const type = towerTypes[tower.typeIndex];
-  if (selectedTowerType === tower.typeIndex && mouseIsPressed === false && towerList[towerList.length - 1] === tower) {
-    noFill();
-    stroke('#b5db8a50');
-    strokeWeight(1);
-    circle(tower.x, tower.y, type.range * 2);
-  }
   noStroke();
   fill('#132019');
   circle(tower.x + 2, tower.y + 3, 34);
@@ -456,7 +450,6 @@ function drawSidebar() {
   text('3. Start a wave when ready.', 758, 630);
   text('Leaked enemies cost one life.', 758, 659);
 
-  if (noticeTimer > 0) noticeTimer -= deltaTime / 1000;
 }
 
 function drawSidebarButton(x, y, buttonWidth, buttonHeight, label, active) {
