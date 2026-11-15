@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortress of the Forgotten Grove</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5play/3.26.5/planck.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5play/3.26.5/p5play.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      background: radial-gradient(ellipse at top, #203b35 0%, #101916 68%);
+      color: #eef4dd;
+      font-family: system-ui, sans-serif;
+    }
+    .page-links {
+      width: min(100%, 1000px);
+      margin: 0 auto 0.75rem;
+    }
+    .page-links a {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid #83a66d;
+      border-radius: 6px;
+      color: #d7edb5;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .page-links a:hover,
+    .page-links a:focus-visible {
+      background: #83a66d;
+      color: #101916;
+    }
+    canvas {
+      display: block;
+      width: min(100%, 1000px);
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid #66805f;
+      border-radius: 10px;
+      box-shadow: 0 18px 60px #0008;
+      touch-action: none;
+    }
+    @media (max-width: 600px) {
+      body { padding: 0.5rem; }
+      canvas { border-radius: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="page-links"><a href="../placeholderlesson1.html/index.html">Home</a></nav>
+  <script src="tower-defense.js"></script>
+</body>
+</html>
